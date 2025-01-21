@@ -1,0 +1,21 @@
+print("Конвертер валют в сомах")
+
+# Курс валют
+rates = {
+    "USD": 85,  # Доллары
+    "EUR": 100, # Евро
+    "GBP": 115  # Фунты стерлингов
+}
+
+# Вывод доступных валют
+print("Доступные валюты для конвертации:")
+print(", ".join(rates.keys()))
+
+# Получение курса валюты из словаря
+currency = input("Введите название валюты (например, USD, EUR, GBP): ").upper()
+rate = rates.get(currency)
+
+# Конвертация
+amount = float(input(f"Введите сумму в {currency}: "))
+som = amount * rate
+print(f"Сумма в сомах: {som}")
